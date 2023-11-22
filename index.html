@@ -1,50 +1,104 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!--Es para el lenguaje de nuestra documento "es": Español-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"><!--sirve para la codificación para caracteres especiales-->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--es para que el sitio sea adaptable, para que se adapte a la pantalla del dispositivo-->
+
+    <meta name="description" content=" Esta pagina trata sobre un PortfolioWep de un estudiante de programación Wep describe quién es y que tecnologías maneja y sus proyectos, para entrar al mundo laboral de la programación"> <!--importante para el SEO "posicionamiento de la página"-->
+
+
+    <meta name="author" content="Sandri Lucas Leonardo"> <!--el nombre del autor de la página-->
+
+
+    <meta name="robots" content="index, noindex. ">
+    <meta name="robots" content="follow, no follow:para seguir o no">
+     <!--indicamos a los buscadores si tienen que indexar la página osea mostrar la página o no y si tienen que seguir los enlaces -->
+
+     <meta name="keywords" content="PortfolioWep, estudiante, programación, Desarrollo Wep, Programador Wep Full Stack"> <!--Palabras clave de lo que trata la página-->
+
+
     <title>Portfolio Wep de Sandri Lucas Leonardo</title>
     <link rel="stylesheet" href="normalizeCSS/normalize.css">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Agregue mi icono -->
+    <link rel="shortcut icon" href="icons-logo-imgs/Mi logo SLL 1.0.png" type="image/x-icon">
 </head>
 <body>
-    <header>
-         <nav>
+    <div class="nav_logo_container">
+        <nav>
             <ul>
-                <li>Sobre Mi</li>
-                <li>Contactos</li>
-                <li>Redes</li>
-                <li></li>
+                <li><a href="#Quien_Soy"><img src="icons-logo-imgs/icons8-sobre-nosotros-48.png" alt="Sobre nosotros icono de Icons8">Quién soy</a></li>
+                <li><a href="#Habilidad"><img src="icons-logo-imgs/icons8-hablilidades-64.png" alt="icons8-hablilidades-64">Habilidades</a></li>
+                <li><a href="#Proyectos"><img src="icons-logo-imgs/icons8-trabajando-con-una-computadora-portátil-64.png" alt="icons8-trabajando-con-una-computadora-portátil-64">Proyectos</a></li>
+                <li><a href="#Redes_Sociales"><img class="icon_redes_sociales" src="icons-logo-imgs/icons8-red-social-64.png" alt="icons8-red-social-64">Redes Sociales</a></li>
+                
             </ul>
          </nav>
-         <h1>PortfolioWep de Sandri Lucas Leonardo</h1>
-         <p>¡Hola buenas!, me llamo Lucas Sandri Leonardo, estudiante de programación en la parte de Desarrollo Full Stack, con el seguimiento de Silicon Misiones en convenio con la UTN (Universidad Tecnológica Nacional). Este Portfolio fue creado en base para que conozcan sobre mi y las tecnologías que manejo e integrarme al mundo laboral de la Programación del Desarrollo Wep
-         </p>
-         <div>
-            <h2>Indice</h2>
-             <ul>
-                <li>Sobre Mi</li>
-                <li>parte 2</li>
-                <li>parte 3</li>
-                <li>parte 4</li>
-             </ul>
+         <div class="logo_SLL">
+            <img src="icons-logo-imgs/Mi logo SLL 1.0.png" alt="logo de SandriLucasLeonardo" title="logo de SandriLucasLeonardo">
+            <h6>Sandri Lucas Leonardo</h6>
          </div>
+    </div>
+<div class="contenedor_cuerpo_menos_del_nav">
+        <header>
+            
+            <h1>Programador de Desarrollo Wep Sandri Lucas Leonardo</h1>
+            
+           <div class="contenedor_img-p-de_la_introducción">
+            <img class="miImagen" src="icons-logo-imgs/Imagen de Sandri Lucas Leonardo .jpg" alt="imagen de SandriLucasLeonardo" title="imagen de SandriLucasLeonardo">
+            <div class="iconos_tecologias">
+                <img src="icons-logo-imgs/icons8-git-480.png" alt="Git icono de Icons8">
+                <img src="icons-logo-imgs/icons8-github-480.png" alt="GitHup icono de Icons8">
+                <img src="icons-logo-imgs/icons8-html-480.png" alt="html icono de Icons8">
+                <img src="icons-logo-imgs/icons8-css-480.png" alt="css icono de Icons8">
+                <img src="icons-logo-imgs/icons8-javascript-480.png" alt="JavaScript icono de Icons8">
+                <img src="icons-logo-imgs/icons8-logotipo-de-bootstrap-480.png" alt="Logotipo de Bootstrap icono de Icons8">
+            </div>
+              <p>¡Hola buenas!, me llamo Lucas Sandri Leonardo, estudiante de programación en la parte de Desarrollo Wep Full Stack, con el seguimiento de Silicon Misiones en convenio con la UTN (Universidad Tecnológica Nacional). Este Portfolio fue creado en base para que conozcan sobre mi y las tecnologías que manejo e integrarme al mundo laboral de la Programación del Desarrollo Wep.
+              </p>
+           </div>
+        
     </header>
-
-<section>
+    
+    <section>
     <article>
-        <h2>Article 1</h2>
+        <h2 id="Quien_Soy">Article 1, ¿Quién soy?</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius velit eos, autem nam suscipit dignissimos error reiciendis architecto veniam ad ex sequi atque excepturi voluptatem saepe numquam quo nisi ipsam.
+            </p>
     </article>
     
     <article>
-        <h2>Article 2</h2>
+        <h2 id="Habilidad">Article 2, Habilidades</h2>
+        <p>
+           . Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reiciendis est voluptate magni repellat nam veritatis incidunt dicta molestias necessitatibus laboriosam error sed quisquam hic aperiam, tempore placeat impedit earum!
+        </p>
     </article>
-</section>
-<footer>
-    <h3>Pie de página</h3>
-</footer>
-
-
+    <article>
+        <h2 id="Proyectos">Article 3 proyectos</h2>
+        <p>
+            ¡¡¡¡colocar el link y hablar de mi página de recetas !!!!!!!!
+        </p>
+    </article>
+    </section>
+    
+       <footer id="Redes_Sociales">
+          <h3>al footer lo hare con Bootstrap</h3>
+            <ul>
+                 <li><a href="">Instagram</a></li>
+                 <li><a href="">LinkedIn</a></li>
+                 <li><a href="">Enlace a GitHup</a></li>
+                 <li><a href="">LinkedIn</a></li>
+            </ul>
+       </footer>      
+</div>   
+<!-- <menu class="menu_git_li">
+    <ul>
+      
+   </ul>
+</menu> -->
 <script src="app.js"></script>
 </body>
 </html>
