@@ -17,28 +17,36 @@
 
      <meta name="keywords" content="PortfolioWep, estudiante, programación, Desarrollo Wep, Programador Wep Full Stack"> <!--Palabras clave de lo que trata la página-->
 
+       <!-- Enlazando bootstrap con CSS -->
+     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+     <!-- NO HABILITO EL LINK "css de bootstrap" PORQUE INTERFIERE EN ALGUNAS DE LAS MODIFICACIONES LOCALES QUE DI CON MI "style.css", PERO IGUAL PUEDO CAMBIAR LOS ESTILOS DE LAS FUNCIONALIDADES TRAÍDAS DESDE bootstra LOCALMENTE CON MI style.css; para saber las clases, ides de las etiquetas traídas de bootstrap voy a mi pagina la inspecciono y selecciono las etiquetas (o el contenedor que contiene las funcionalidades y etiquetas) y me muestran las clases e ides que acá en mi index.html no me muestran, igual en este caso las clases que necesitaba estaban en mi archivo app.js-->
+
 
     <title>Portfolio Wep de Sandri Lucas Leonardo</title>
-    <link rel="stylesheet" href="normalizeCSS/normalize.css">
-    <link rel="stylesheet" href="style.css">
 
+    <link rel="stylesheet" href="normalizeCSS/normalize.css">
+    
+    <link rel="stylesheet" href="style.css">
+    
     <!-- Agregue mi icono -->
     <link rel="shortcut icon" href="icons-logo-imgs/Mi logo SLL 1.0.png" type="image/x-icon">
 </head>
 <body>
     <div class="nav_logo_container">
-        <nav>
+        <nav class="barra_de_navegación">
             <ul>
                 <li><a href="#Quien_Soy"><img class="sobre_mi" src="icons-logo-imgs/icons8-sobre-nosotros-48.png" alt="Sobre nosotros icono de Icons8">Sobre Mi</a></li>
-                <li><a href="#Habilidad"><img class="icon_habilidades" src="icons-logo-imgs/icons8-hablilidades-64.png" alt="icons8-hablilidades-64">Habilidades</a></li>
+                <li><a href="#Habilidades"><img class="icon_habilidades" src="icons-logo-imgs/icons8-hablilidades-64.png" alt="icons8-hablilidades-64">Habilidades</a></li>
                 <li><a href="#Proyectos"><img class="icon_proyecto" src="icons-logo-imgs/icons8-trabajando-con-una-computadora-portátil-64.png" alt="icons8-trabajando-con-una-computadora-portátil-64">Proyectos</a></li>
-                <li><a href="#Redes_Sociales"><img class="icon_contacto" src="icons-logo-imgs/icons8-red-social-64.png" alt="icons8-red-social-64">Contactos</a></li>
+                <li><a href="#Contactos"><img class="icon_contacto" src="icons-logo-imgs/icons8-red-social-64.png" alt="icons8-red-social-64">Contactos</a></li>
                 
             </ul>
          </nav>
          <div class="logo_SLL">
-            <img src="icons-logo-imgs/Mi logo SLL 1.0.png" alt="logo de SandriLucasLeonardo" title="logo de SandriLucasLeonardo">
-            <h6>Sandri Lucas Leonardo</h6>
+            <a href="#Quien_Soy">
+                <img src="icons-logo-imgs/Mi logo SLL 1.0.png" alt="logo de SandriLucasLeonardo" title="logo de SandriLucasLeonardo">
+                <h6>Sandri Lucas Leonardo</h6>
+            </a>
          </div>
     </div>
 <div class="contenedor_cuerpo_menos_del_nav">
@@ -65,37 +73,109 @@
     
     <section>
     <article>
-        <h2 id="Quien_Soy">Article 1, ¿Quién soy?</h2>
+            <div>
+                <img class="icon-QuienSoy" src="icons-logo-imgs/icons8-sobre-nosotros-48.png" alt="icons8-sobre-nosotros-48">
+                <h2 id="Quien_Soy">¿Quién soy?</h2>
+            </div>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius velit eos, autem nam suscipit dignissimos error reiciendis architecto veniam ad ex sequi atque excepturi voluptatem saepe numquam quo nisi ipsam.
+                Me llamo Lucas Sandri Leonardo, tengo 20 años. Vivo en la localidad de Mojón Grande, departamento San Javier, provincia de Misiones Argentina. Soy estudiante de programación.
+                <h4>¿Cómo conocí la Programación?</h4>
+                En Marzo del 2023 en mi localidad se me dio la oportunidad de cursar de forma presencial el curso de <strong>Introducción a la Programación</strong>, al principio me fue bastante difícil entender la mayoría de los conceptos, pero con la practica se me fueron aclarando varias cosas y me interesó cada vez mas todo lo relacionado a la <strong>programación</strong> 
             </p>
-    </article>
+            <!-- Para abrir un pdf en una página, un <a> con la dirección del archivo.pdf, también se puede agregar el valor #page=[1] que le decimos en que página del pdf queremos que nos abra, dentro de los [] le definimos el numero de la página página-->
+            <a href="icons-logo-imgs/Certificado Sandri Lucas.pdf" target="_blank"><u><strong>Ver</strong> <em>Certificado de <strong>introducción a la programación.pdf</strong></em></u></a>
+    </article><br><br><br>
     
     <article>
-        <h2 id="Habilidad">Article 2, Habilidades</h2>
-        <p>
-           . Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reiciendis est voluptate magni repellat nam veritatis incidunt dicta molestias necessitatibus laboriosam error sed quisquam hic aperiam, tempore placeat impedit earum!
-        </p>
-    </article>
+       
+         <div>
+            <div>
+                <img class="icon-Habilidades" src="icons-logo-imgs/icons8-hablilidades-64.png" alt="icons8-hablilidades-64">
+                <h2 id="Habilidades">Habilidades</h2>
+            </div>
+            <p>
+               Actualmente me estoy capacitando en las siguientes tecnologías en la parte del <strong>Front End</strong> para el desarrollo wep:
+            </p>
+               <img src="icons-logo-imgs/icons8-git-480.png" alt="icons8-git-480">
+               <p>
+                <strong>Git</strong> es un software de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia, la confiabilidad y compatibilidad del mantenimiento de versiones de aplicaciones cuando estas tienen un gran número de archivos de código fuente.
+               </p><br>
+               <img src="icons-logo-imgs/icons8-github-480.png" alt="icons8-github-480">
+               <p>
+                  <strong>GitHub</strong> es una forja para alojar proyectos utilizando el sistema de control de versiones <strong>Git</strong>. Se utiliza principalmente para la creación de código fuente de programas de ordenador
+               </p><br>
+               <img src="icons-logo-imgs/icons8-html-480.png" alt="icons8-html-480.png">
+               <p>
+                  <strong>HTML</strong>, siglas en inglés de <strong>HyperText Markup Language</strong>, hace referencia al <strong>lenguaje de marcado</strong> para la elaboración de páginas web.
+               </p><br>
+               <img src="icons-logo-imgs/icons8-css-480.png" alt="icons8-css-480.png">
+               <p>
+                <strong>CSS</strong>, en español <strong>«Hojas de estilo en cascada»</strong>, es un <strong>lenguaje de diseño gráfico</strong> para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado.
+               </p><br>
+               <img src="icons-logo-imgs/icons8-javascript-480.png" alt="icons8-javascript-480.png">
+               <p>
+                <strong>JavaScript</strong> es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico.
+               </p><br>
+               <img src="icons-logo-imgs/icons8-logotipo-de-bootstrap-480.png" alt="icons8-logotipo-de-bootstrap-480.png">
+               <p>
+                <strong>Bootstrap</strong> es una biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones web.
+               </p>
+         </div> 
+
+    </article><br><br><br>
     <article>
-        <h2 id="Proyectos">Article 3 proyectos</h2>
+        <div>
+            <img class="icon-Proyectos" src="icons-logo-imgs/icons8-trabajando-con-una-computadora-portátil-64.png" alt="icons8-trabajando-con-una-computadora-portátil-64">
+            <h2 id="Proyectos">Proyectos</h2>
+        </div> 
         <p>
-            ¡¡¡¡colocar el link y hablar de mi página de recetas !!!!!!!!
+             <!-- rel=”noreferrer”, Evita pasar la información de referencia al sitio web de destino eliminando la información de referencia del encabezado HTTP.
+                rel=”noopener”, Impide que la página de apertura obtenga cualquier tipo de acceso a la página original.-->
+            <strong>Cómo hacer Pan medio saludable en ¡A cocinar PEND***! </strong><a href="https://lucas-sandri.github.io/Pagina-De-Recetas/" target="_blank" rel="noopener noreferrer"><em><u>link de la página</u></em></a>, es una página que esta en proceso se trata sobre recetas saludables que su objetivo es ayudar a las personas tener una mejor calidad de vida y que sepan que lo saludable también puede ser <strong>delicius</strong>. <em>
+                Mas que nada es una página de practicas.
+            </em> <br>
+            <div class="contenedor_ighRepo_subti">
+                <a href="https://github.com/Lucas-Sandri" target="_blank">
+                    <img class="icono_gitRepositorio" src="icons-logo-imgs/icons8-githubRepositorios-512.png" alt="GitHub icono de Icons8">
+                    <h4 class="subtituloh4-repositorio-git"><u>Repositorios de GitHup</u></h4></a>
+            </div><br>
+            <strong>Practicas:</strong> <br>
+            <a href="https://github.com/Lucas-Sandri/Curso_FrontEnd.git" target="_blank" ><em><u>Cómo hacer Pan medio saludable en ¡A cocinar PEND***!</u></em></a><br><br>
+            <strong>Repositorio de éste PortfolioWep:</strong><br>
+            <a href="https://github.com/Lucas-Sandri/PortfolioWep_Sandri-Lucas-Leonardo.git" target="_blank"><em><u>PortfolioWep_Sandri-Lucas-Leonardo</u></em></a>
         </p>
+        
     </article>
-    </section>
-    
-       <footer id="Redes_Sociales">
-          <h3>al footer lo hare con Bootstrap</h3>
+    </section><br><br><br>
+       
+       <!-- ESTO FUE HECHO PARA PROBAR SI ANDA EL BOOTSTRAP EN MI ARCHIVO index.html, SIN TOCAR MIS ESTILOS CSS -->
+       <div id="liveAlertPlaceholder">
+            <h5>Logo vers-1.0 actual</h5>
+       </div>
+       <button type="button" class="btn btn-primary" id="liveAlertBtn">Mostrar Logo</button><br><br><br> <br><br> 
+      
+       <div>
+        <img class="icon-Contactos" src="icons-logo-imgs/icons8-red-social-64.png" alt="icons8-red-social-64">
+        <h3 id="Contactos">Contactos</h3>
+     </div>
+     <footer>
+         
+          <div class="container_redes_footer">
             <ul>
-                 <li><a href="">Instagram</a></li>
-                 <li><a href="">LinkedIn</a></li>
-                 <li><a href="">Enlace a GitHup</a></li>
-                 <li><a href="">LinkedIn</a></li>
+                <li class="logo_gmail"><a href="mailto:leonardosandri111@gmail.com"><img class="logo_gmail_img" src="icons-logo-imgs/icons8-gmail-200.png"></a></li>
+                <li class="logo_linkedin"><a href="https://www.linkedin.com/in/lucas-leoardo-sandri-8580242a1"><img class="logo_linkedin_img" src="icons-logo-imgs/icons8-linkedin-200.png" alt=""></a></li>
+                <li  class="logo_whatsapp"><a href="https://api.whatsapp.com/send/?phone=5493754478772&text=Hola, ¡Vengo desde tu PortfolioWep!"><img class="logo_whatsapp_img" src="icons-logo-imgs/icons8-whatsapp-200.png" alt="icons8-whatsapp"></a></li>
+                <span>&#169; Sandri Lucas Leonardo</span>
             </ul>
-       </footer>      
+          </div>
+          
+     </footer>
 </div>   
 
+
+<!-- Enlazando bootstrap con JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!-- Mi archivo JavaScript -->
 <script src="app.js"></script>
 </body>
 </html>

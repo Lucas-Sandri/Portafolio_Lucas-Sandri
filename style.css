@@ -8,7 +8,7 @@
 body{/*le di un background al body para que no incomode el fondo blanco al minimizar el viewport en mobile, después lo arreglo con media query*/
     background: linear-gradient(90deg,#6636ff, #33ccff,#6636ff, #33ccff,#6636ff, #33ccff,#6636ff, #33ccff,#6636ff, #33ccff);
 }
-nav  {  
+.barra_de_navegación  {  
     width: 15%;
     top: 11%;
     background: linear-gradient(90deg,#6636ff, #33ccff);
@@ -16,7 +16,7 @@ nav  {
     margin-right: 2%;
     max-height: 100vh;
 }
-nav ul {
+.barra_de_navegación ul {
     padding: 0%;
     margin-top: 2%;
     height: 100vh;
@@ -24,22 +24,26 @@ nav ul {
     flex-direction: column;
     align-items: center;
 }
-nav ul li{/*dando espacio a la barra de navegación par que no queden muy cerca los iconos*/
+.barra_de_navegación ul li{/*dando espacio a la barra de navegación par que no queden muy cerca los iconos*/
     margin-top: 5%;
-    
+    text-shadow:-1.5px 1px #6fdff0;
     box-shadow: -5px 5px 45px 5px;
     
 }
-nav ul li a{
+.barra_de_navegación ul li a{
     padding: 0;
     margin: 0;
+    
 }
-nav ul li:hover{
+.barra_de_navegación ul li:hover{
     margin-left: 20px;
     margin-bottom: 5px;
     margin-top: 2px;
+    transition: all .3s ease;
+    filter:brightness(118%);
+    text-shadow:1px .8px 1px hsl(306, 100%, 63%);
 }
-nav ul li:first-child {/*selección por pseudo-clase, acá seleccione la 1mer lista de la barra de navegación */
+.barra_de_navegación ul li:first-child {/*selección por pseudo-clase, acá seleccione la 1mer lista de la barra de navegación */
     /*aca le estoy dando un fondo a los li(listas) del nav(barra de navegación) y ajustando el tamaño de su fondo para que quede del mismo tamaño que el de los otros iconos*/
     background: linear-gradient(90deg, #6636ff ,#25f2fd);
     height: 13%;
@@ -48,11 +52,11 @@ nav ul li:first-child {/*selección por pseudo-clase, acá seleccione la 1mer li
 .sobre_mi{/*centrando los iconos de la barra de navegación*/
     padding-left: 18%;
 }
-nav ul li:first-child:hover{
+.barra_de_navegación ul li:first-child:hover{
     margin-top: 5px;
     margin-left: 20px;
 }
-nav ul li:nth-child(2){/*selección por pseudo-clase, acá seleccione la 2da lista de la barra de navegación */
+.barra_de_navegación ul li:nth-child(2){/*selección por pseudo-clase, acá seleccione la 2da lista de la barra de navegación */
     background: linear-gradient(90deg, #6636ff ,#25f2fd);
     padding: 4% 6% 4% 6%;
     height: 16%;
@@ -60,7 +64,7 @@ nav ul li:nth-child(2){/*selección por pseudo-clase, acá seleccione la 2da lis
 .icon_habilidades{/*centrando los iconos de la barra de navegación*/
     padding-left: 16%;
 }
-nav ul li:nth-child(3){/*selección por pseudo-clase, acá seleccione la 3ra lista de la barra de navegación */
+.barra_de_navegación ul li:nth-child(3){/*selección por pseudo-clase, acá seleccione la 3ra lista de la barra de navegación */
     background: linear-gradient(90deg, #6636ff ,#25f2fd);
     padding: 11%;
     height: 12%;
@@ -68,7 +72,7 @@ nav ul li:nth-child(3){/*selección por pseudo-clase, acá seleccione la 3ra lis
 .icon_proyecto{/*centrando los iconos de la barra de navegación*/
     padding-left: 18%;
 }
-nav ul li:nth-child(4){/*selección por pseudo-clase, acá seleccione la 4ta lista de la barra de navegación */
+.barra_de_navegación ul li:nth-child(4){/*selección por pseudo-clase, acá seleccione la 4ta lista de la barra de navegación */
     background: linear-gradient(90deg, #6636ff ,#25f2fd);
     height: 19%;
     padding: 3% 10% 0% 10%;
@@ -78,10 +82,12 @@ nav ul li:nth-child(4){/*selección por pseudo-clase, acá seleccione la 4ta lis
     padding-top: 8px;
 }
 
-nav ul li a img{
+.barra_de_navegación ul li a img{
     display: block; 
     width: 60%; 
 }
+
+/*imagen y texto del logo*/
 .logo_SLL{
     margin: 20px 0px 20px;
     position: fixed;
@@ -112,10 +118,11 @@ a{
     text-decoration: none;
 }
 
-
+/*
+ES LA PARTE DEL CUERPO DE LA PÁGINA*/
 .contenedor_cuerpo_menos_del_nav{/*esto lo hice para dar lugar a la parte de contacto y barra de navegación*/
     margin-left: 15%;
-    padding: 2%;
+    padding: 2% 2% 0% 2% ; /*abajo le di 0% para que el footer quede contra el viewport de la página*/
     background: linear-gradient(90deg, #30d6d6, #3399ff);/*para dar ese efecto al fondo, el primer color es el que esta a la izquierda y el segundo a la derecha, el valor "deg" nos dice como se inclinaran estos dos colores para generar el degradado*/
     box-sizing:border-box;/*hace que el padding y el border pasen a formar parte del calculo del ancho de la caja y no lo suman posteriormente(después)*/
     margin-top: -22px;/*para que no sobre un espacio en blanco en la parte de arriba de la página, "px" para que no se modifique al hacerlo responsy */
@@ -156,6 +163,9 @@ h1{
     grid-row:1 / 3 ;/*celdas irregulares; aca dije que mi imagen empiece en la linea 1 de la fila y termine en la linea 3 de la fila, esto creo otra fila, porque una fila tiene 2 lineas*/
     grid-column: 4 / 5;
 }
+.miImagen:hover{
+    transform: scale(1.3);
+}
 
 .iconos_tecnologias img:nth-child(2){/*logo de Git*/
     order: 10;
@@ -181,3 +191,139 @@ h1{
       order: 60;
     width: 50%;
 }
+
+/*ESTILANDO LOS ICONOS DE LOS ARTICLES HABILIDADES*/
+article div img{
+    width: 60px;
+}
+/*ESTILANDO LOS ICONOS DE LOS ARTICLES QUIEN SOY, HABILIDADES, PROYECTOS Y CONTACTOS*/
+#Quien_Soy{
+    display: inline;
+}
+.icon-QuienSoy{
+    width: 30px;
+}
+
+#Habilidades{
+    display: inline;
+}
+.icon-Habilidades{
+    width: 35px;
+}
+
+#Proyectos{
+    display: inline;
+}
+.icon-Proyectos{
+    width: 33px;
+}
+#Contactos{
+    display: inline;
+}
+.icon-Contactos{
+    width: 39px;
+}
+.icon-Contactos:hover{
+    transition:all .5s ease;
+    filter:blur(650%);
+}
+
+.contenedor_ighRepo_subti{
+    padding-left: 20px;
+}
+.icono_gitRepositorio {
+   width: 30px;
+   padding-right: 3px ;
+}
+.subtituloh4-repositorio-git {
+    display: inline;
+    padding-bottom:20px ;
+}
+
+/*SI SE PUEDE MODIFICAR EL CSS DE UNA ALERTA AGREGADA CON BOOTSTRAP, lo único que se me ocurrió por hacer utilizando bootstrap sin su estilo css*/
+#liveAlertPlaceholder{
+    /* background-color: aliceblue; */
+    position: relative;
+}
+.contenedorAlert{
+    position: relative;
+}
+
+/* #mi_logo_alert_js{
+    display: none;
+} */
+
+.btn-close{/*botón de cierre de alert*/
+    position: relative;
+    padding: 0;
+}
+
+.x-icono-cerrar-alert{
+    padding: 0;
+    margin: 0;
+    width: 15px;
+    height: 15px;   
+}
+footer{
+    background-image: url(icons-logo-imgs/FondoColorVerdeAguaConBlanco\ .png);
+    background-position-x:-2px;
+    background-position-y:-20px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin: 0% -2.5% 0% -2.6%;
+    opacity: 85%;
+}
+
+
+.container_redes_footer ul{/*le tuve que dar display:grid; a los ul para poder acomodar los li*/
+display: grid;
+/* justify-content: space-between; */
+align-items: center;/*para centrar los logos verticalmente*/
+justify-items: center;/*para centrar los logos horizontalmente*/
+grid-template-rows: 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr;
+padding: 0;/*las ul crean un padding auto*/
+}
+/*SELECCIONANDO LOS LOGOS DEL FOOTER*/
+.logo_gmail{
+
+}
+.logo_linkedin{
+    grid-column: 2 / 3;
+}
+.logo_gmail_img:hover{
+    transform: scale(1.3);
+    transition: all .3s ease;
+    filter:contrast(150%);
+    opacity: 100%;
+}
+.logo_linkedin_img:hover{
+    transform: scale(1.3);
+    transition: all .3s ease;
+    filter:contrast(150%);
+    opacity: 100%;
+}
+.logo_whatsapp_img:hover{
+    transform: scale(1.3);
+    transition: all .3s ease;
+    filter:contrast(150%);
+    opacity: 100%;
+
+}
+span{/*el copyright*/
+    padding-bottom: 10px;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    font-size: 9px;
+    align-self: end;/*para acomodar la caja item personalmente*/
+}
+
+.container_redes_footer ul li{
+    display: inline;
+}
+.container_redes_footer ul li a img{
+width: 40px;
+}
+
+
+
