@@ -1,1 +1,1 @@
-Hola me llamo Lucas Sandri Leonardo este es  mi portafolio *¡CONTRÁTENME PLIIIIS AAAAAAA!*  
+Hola me llamo Lucas Sandri Leonardo éste es  mi portfolio wep  
