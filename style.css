@@ -15,6 +15,7 @@ body{/*le di un background al body para que no incomode el fondo blanco al minim
     position: fixed;
     margin-right: 2%;
     max-height: 100vh;
+    z-index: 200;
 }
 .barra_de_navegación ul {
     padding: 0%;
@@ -52,8 +53,9 @@ body{/*le di un background al body para que no incomode el fondo blanco al minim
     padding-left: 18%;
 }
 .barra_de_navegación ul li:first-child:hover{
-    margin-top: 5px;
-    margin-left: 20px;
+    margin-top: 1%;
+    margin-left: 2%;
+    filter:saturate(250%);
 }
 .barra_de_navegación ul li:nth-child(2){/*selección por pseudo-clase, acá seleccione la 2da lista de la barra de navegación */
     background: linear-gradient(90deg, #6636ff ,#25f2fd);
@@ -138,7 +140,7 @@ header{
     margin: 0% -2.5% 0% -2.6%;
 }
 .contenedor_del_h1{
-    padding: 2% 11% 2% 11%;
+    padding: 0.1% 11% 2% 11%;
 }
 
 .contenedor_del_h1 h1{
@@ -279,9 +281,12 @@ header{
         filter: saturate(300%);
     }
     100%{
-       transform: translateY(260%);
+       transform: translateY(10.5em);
        filter: brightness(50%);
     }
+}
+article{
+    padding-left: -1%;
 }
 
 /*ESTILANDO LOS ICONOS DE LOS ARTICLES HABILIDADES*/
@@ -357,15 +362,18 @@ article div img{
     height: 15px;   
 }
 footer{
-    background-image: url(icons-logo-imgs/FondoColorVerdeAguaConBlanco\ .png);
+    background-image: url(icons-logo-imgs/LadrillosFondoColorVerdeAguaClaro\ .png);
     background-position-x:-2px;
     background-position-y:-20px;
     background-size:cover;
     background-repeat: no-repeat;
     margin: 0% -2.5% 0% -2.6%;
-    opacity: 85%;
+    opacity: 80%;
 }
-
+.container_redes_footer{
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter:blur(10px);
+}
 
 .container_redes_footer ul{/*le tuve que dar display:grid; a los ul para poder acomodar los li*/
 display: grid;
@@ -374,33 +382,29 @@ align-items: center;/*para centrar los logos verticalmente*/
 justify-items: center;/*para centrar los logos horizontalmente*/
 grid-template-rows: 1fr 1fr;
 grid-template-columns: 1fr 1fr 1fr;
-padding: 0;/*las ul crean un padding auto*/
+padding: 2% 0% 0% 0%;/*las ul crean un padding auto*/
 }
 /*SELECCIONANDO LOS LOGOS DEL FOOTER*/
-.logo_gmail{
-
-}
 .logo_linkedin{
     grid-column: 2 / 3;
 }
 .logo_gmail_img:hover{
     transform: scale(1.3);
     transition: all .3s ease;
-    filter:contrast(150%);
     opacity: 100%;
+    filter:saturate(200%);
 }
 .logo_linkedin_img:hover{
     transform: scale(1.3);
     transition: all .3s ease;
-    filter:contrast(150%);
     opacity: 100%;
+    filter:saturate(350%);
 }
 .logo_whatsapp_img:hover{
     transform: scale(1.3);
     transition: all .3s ease;
-    filter:contrast(150%);
     opacity: 100%;
-
+    filter:saturate(350%);
 }
 span{/*el copyright*/
     padding-bottom: 10px;
@@ -414,7 +418,12 @@ span{/*el copyright*/
     display: inline;
 }
 .container_redes_footer ul li a img{
-width: 40px;
+width: 50px;
+filter: contrast(150%);
+filter:contrast(150%);
+}
+.main-header{
+    display: none;
 }
 
 /*MEDIA QUERY*/
@@ -423,6 +432,139 @@ width: 40px;
     .nav_logo_container{
         display: none;
     }
+    .solo_la_img_logo{
+        border-bottom-left-radius: 35%;
+        border-top-right-radius: 70%;
+        border-bottom-right-radius: 20%;
+        border-top-left-radius: 50%;
+        width: 25%;/*el with y el padding tienen estas propiedades para que la img sea responsy*/
+        padding-left: 6%;
+        padding-top: 11%;  
+    }
+    /*MENU HAMBURGUESA PARA PANTALLAS < a 655px */
+    .main-header {
+        height: 10px;
+        width:100% ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        padding: 0 0.4rem;
+      }
+      .main-logo {
+        color: black;
+        font-size: 32px;
+        text-decoration: none;
+      }
+      .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 80%;
+        margin-left: -100%;
+        transition: all 0.4s linear;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .main-nav.show {/*Cuando ejecute la función("Click") ejecutara esta clase que seria mostrar el menu porque anteriormente le dimos un margin -100%, para salga de la pantalla*/
+        margin-left: 0;
+      }
+      .nav-links {
+        background:linear-gradient(90deg,rgba(225, 94, 248, 0.719), #6cbad1);
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .nav-links a{
+        background: linear-gradient(90deg, #4667ee,#d271eb);
+        /* margin-top: 5%; */
+        text-shadow:-1.5px 1px #6fdff0;
+        box-shadow: -5px 5px 45px 5px;
+        position: relative;
+        padding: 0% 2% 1.5% 2%;
+      }
+      .nav-links a:hover{
+        transition: all .2s;
+        filter:brightness(118%);
+        text-shadow:1px .8px 1px hsl(306, 100%, 63%);
+      }
+      .nav-links a img{
+        display: block;
+        padding-top: 10%;
+        padding-left: 10%;
+        width: 60%;
+      }
+      .link-item {
+        margin-top: 2rem;
+        color: #444444;
+        text-decoration: none;
+        font-weight: bold;
+        position: relative;
+      }
+      .button-menu {
+        position: fixed;
+        z-index: 200;
+        width: 30px;
+        height: 40px;
+        border: none;
+        display: flex;
+        background: none;
+        flex-direction: column; /* Pondrá un span debajo del otro*/
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding-left: 0%;
+        margin-top: 18%;
+      }
+      /* 
+        Dibujamos una línea recta por cada span creando el tipico menu hamburguesa
+      */
+      
+      .button-menu span {
+        width: 70%;
+        height: 1%;
+        margin-bottom: 5px;
+        position: relative;
+        background: #ff6bff;
+        border-radius: 3px;
+        border:2px solid #000000;
+        filter: brightness(250%); 
+        filter: saturate(450%);
+        transform-origin: 4px 0px;
+        transition: all 0.2s linear;
+        opacity: .9;
+        margin-left: 20vw;
+      }
+      
+      /* 
+        con los span dibujamos un icono de cerrar 
+        para mostrar cuándo la navegación este abierta 
+      */
+      
+      .button-menu.close span {
+        opacity: .9;
+        transform: rotate(40deg) translate(9px, -0.5px);
+        background: #ff0000;
+        border: 1px solid #040404;
+        width: 37px;
+        height: 4%;
+        right: -3.7vw;
+      }
+      
+      .button-menu.close span:nth-child(2) {
+        transform: rotate(-45deg) translate(-8px, 5px);
+      }
+      
+      .button-menu.close span:nth-child(3) {
+        display: none;
+      }
+
+/* --------##################################################______ */
+
     .iconos_tecnologias{/*acomodando los iconos de las tecnologías que manejo con grid */
         /* position: relative; */
 
@@ -438,6 +580,9 @@ width: 40px;
         max-width: 100%;
         grid-row:1 / 4 ;/*celdas irregulares; aca dije que mi imagen empiece en la linea 1 de la fila y termine en la linea 3 de la fila, esto creo otra fila, porque una fila tiene 2 lineas*/
         grid-column: 2 / 4;
+    }
+    .miImagen:hover{
+        transform: none;
     }
     .iconos_tecnologias img:nth-child(2){/*logo de Git*/
         order: 10;
@@ -465,6 +610,9 @@ width: 40px;
         width: 50%;
         grid-column: 4/5;
     }
+    .contenedor_img-p-de_la_introducción p{
+        padding: .5% 2% 1% 4%;
+    }
     .contenedor_cuerpo_menos_del_nav{
       margin-left: 0;
     }
@@ -474,6 +622,9 @@ width: 40px;
     .h1_y_mi_nombre{
         text-decoration:underline;
     }
+    article{
+        padding-left: 2%;
+    }
     footer{
         padding-bottom: 1%;
         margin-bottom: 0;
@@ -481,5 +632,10 @@ width: 40px;
     }
 }
 
+@media (max-width: 480px){
+    article{
+        padding-left: 4%;
+    }
+}
 
 

@@ -33,3 +33,36 @@ if (alertTrigger) {
 }
 
 /*EL (.addEventListener) es un escuchador que indica al navegador que este atento a la interacción del usuario*/
+
+
+
+
+//INTERACCIÓN CON EL BOTÓN HAMBURGUESA
+
+//  seleccionamos los dos elementos que serán clickables
+
+const toggleButton = document.getElementById("button-menu");
+const navWrapper = document.getElementById("nav");
+
+
+/* 
+  cada ves que se haga click en el botón 
+  agrega y quita las clases necesarias 
+  para que el menú se muestre.
+*/
+toggleButton.addEventListener("click", () => {
+  toggleButton.classList.toggle("close");
+  navWrapper.classList.toggle("show");
+});
+
+/* 
+  Cuándo se haga click fuera del contenedor de enlaces 
+  el menú debe esconderse. Cuando se haga click en el menu que desaparezca elimine el la clase show(que seria la que muestra el menu), y también elimina lo que almacena la variable "toggleButton", què si esta visible el menu lo cierre
+*/
+//cada vez que clickeo el botón, automáticamente se invoca con un parámetro que es (e), el cual tiene una propiedad (entre otras) llamada "target", que es el elemento que dispara el evento, luego buscas el "id" en "target"
+navWrapper.addEventListener("click", e => {
+  if (e.target.id === "nav","link-item") {//coloque el id del menu("nav") y la clase de los anclas y sus img(link-item) para que cuando se le haga click a cualquiera de ellos se cierre el menu
+    navWrapper.classList.remove("show");
+    toggleButton.classList.remove("close");
+  }
+});
