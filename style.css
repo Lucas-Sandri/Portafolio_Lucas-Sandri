@@ -38,7 +38,8 @@ body{/*le di un background al body para que no incomode el fondo blanco al minim
 .barra_de_navegación ul li:hover{
     margin-left: 20px;
     margin-bottom: 5px;
-    margin-top: 2px;
+    margin-top: 2px; 
+    transform: scale(1.1);
     transition: all .3s;
     filter:brightness(118%);
     text-shadow:1px .8px 1px hsl(306, 100%, 63%);
